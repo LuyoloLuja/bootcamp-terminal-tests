@@ -6,5 +6,5 @@ module.exports = function allPaarl(regNumbers){
            regNumbersForPaarl.push(splitingNums[i]);
             }
         }
-      return regNumbersForPaarl;
+     return regNumbersForPaarl;
 }
