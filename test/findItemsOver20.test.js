@@ -10,11 +10,11 @@ describe('The findItemsOver20 function', function(){
     ];
 
     it('Should return true for pears', function(){
-        assert.equal(itemList.apples, undefined);
+        assert.equal(itemList.pears, undefined);
     })
 
     it('Should return true for bananas', function(){
-        assert.equal(itemList.apples, undefined);
+        assert.equal(itemList.bananas, undefined);
     })
     it('Should return false for apples', function(){
         assert.equal(itemList.apples, undefined);
