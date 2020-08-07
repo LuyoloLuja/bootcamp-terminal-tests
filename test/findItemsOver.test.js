@@ -23,11 +23,13 @@ let assert = require("assert");
 let findItemsOver = require("../findItemsOver");
 
 describe('findItemsOver function' , function(){
-    it('should  return all the products that have a quantity higher than threshold.  ' , function(){
-        assert.deepEqual(findItemsOver([{name:"pears", qty:27}],25), [{name:"pears", qty:27}])
+    it('Should return apples since quantity is higher than threshold.' , function(){
+        assert.deepEqual(findItemsOver([{name:"apples", qty:40}]), [{name:"apples", qty:40}])
     });
-    it('should  return an empty Array if quantity product is  higher lower than  threshold. ' , function(){
-        assert.deepEqual(findItemsOver([{name:"bananas", qty:9},{name:"apples", qty:11}], 15),[])
-    }); 
-    
+    it('Should return other apples since quantity is higher than threshold.' , function(){
+        assert.deepEqual(findItemsOver([{name:"apples", qty:23}]), [{name:"apples", qty:23}])
+    });
+    it('Should  return an empty array for pears - quantity lower than  threshold. ' , function(){
+        assert.deepEqual(findItemsOver([{name:"pears", qty:20}, {name:"pears", qty:20}]),[])
+    });    
 });
