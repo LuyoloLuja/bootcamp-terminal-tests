@@ -1,10 +1,19 @@
-module.exports =  function findItemsOver(list, threshold){
-    var increment = [];
-    for(var i = 0; i < list.length; i++){
-        var eachItem = list[i];
-      if(list[i].qty > threshold){
-          increment.push(eachItem);
+module.exports = function (items){
+    var list = [];
+    for(var i = 0; i < items.length; i++){  
+      if(items[i].qty > 20){
+        list.push(items[i]);
       }
     }
-    return increment;
+    return list;
+  }
+    
+  function findItemsOver(items,threshold){
+    var itemsList = [];
+    for(var i = 0; i < items.length; i++){  
+     if(items[i].qty > threshold){
+        itemsList.push(items[i]);
+     }
+    }
+  return itemsList;
 }
